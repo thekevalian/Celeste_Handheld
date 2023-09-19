@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AZ431LBZTR-E1
+D Voltage References Adj Prec Shunt Reg 1.24V to 18V 3mV
+K
+F https://www.diodes.com/assets/Datasheets/AZ431L.pdf
+$ENDCMP
+#
+#End Doc Library

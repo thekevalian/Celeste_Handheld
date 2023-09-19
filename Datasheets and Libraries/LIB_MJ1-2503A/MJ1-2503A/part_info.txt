@@ -1,0 +1,9 @@
+Manufacturer=CUI Devices
+PartNumber=MJ1-2503A
+PartCategory=Connector
+PackageCategory=Other
+PinCount=3
+Version=1.2
+Released=2019-07-12 18:30:44
+Downloaded=2023-05-07 02:10:32
+3D=Y

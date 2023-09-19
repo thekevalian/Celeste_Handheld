@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "MJ1-2503A"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2019-07-12-18:30:44)
+    (mountForm default
+        (footprintRef "MJ12503A")
+        (spec "System")
+    )
+)

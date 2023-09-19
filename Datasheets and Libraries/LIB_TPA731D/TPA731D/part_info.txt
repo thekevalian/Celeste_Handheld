@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=TPA731D
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=8
+Version=1.1
+Released=2020-04-04 09:31:50
+Downloaded=2023-05-08 19:28:10
+3D=Y

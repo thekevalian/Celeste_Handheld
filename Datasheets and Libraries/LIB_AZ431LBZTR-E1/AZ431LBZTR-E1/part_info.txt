@@ -1,0 +1,9 @@
+Manufacturer=Diodes Inc.
+PartNumber=AZ431LBZTR-E1
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=3
+Version=1.7
+Released=2022-12-14 12:35:18
+Downloaded=2023-05-08 19:34:22
+3D=Y

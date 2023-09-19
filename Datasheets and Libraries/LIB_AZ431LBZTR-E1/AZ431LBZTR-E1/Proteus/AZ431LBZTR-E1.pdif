@@ -1,0 +1,111 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "AZ431LBZTR-E1"
+   (description "Voltage References Adj Prec Shunt Reg 1.24V to 18V 3mV")
+   (family "ANA")
+   (package "AZ431LBZTRE1")
+   (attribute "Datasheet Link" "https://www.diodes.com/assets/Datasheets/AZ431L.pdf")
+   (attribute "Geometry.Height" "8.7mm")
+   (attribute "Mouser Part Number" "621-AZ431LBZTR-E1")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/AZ431LBZTR-E1?qs=FKu9oBikfSmXZc2hlLrlkw%3D%3D")
+   (attribute "Manufacturer_Name" "Diodes Inc.")
+   (attribute "Manufacturer_Part_Number" "AZ431LBZTR-E1")
+   (gate
+    (symbol "AZ431LBZTR-E1")
+    (pin "REF" 1 PS)
+    (pin "ANODE" 2 PS)
+    (pin "CATHODE" 3 PS)
+   )
+  )
+  (symbol "AZ431LBZTR-E1"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 900 100) (pt 900 -300) (pt 200 -300) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -200) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "AZ431LBZTRE1"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -1.635 3.807)
+      (pt 6.714 3.807)
+      (pt 6.714 -1.993)
+      (pt -1.635 -1.993)
+      (pt -1.635 3.807))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt 0.24 -0.993)
+      (pt 4.84 -0.993)
+      (pt 4.84 0.507)
+      (arc (pt 4.840 0.507) (pt 0.240 -1.793) (pt 4.840 2.807) (start 180.0) (sweep .0))
+      (pt 0.24 0.507)
+      (pt 0.24 -0.993))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -1.26 0)
+      (arc (pt -1.260 0.000) (pt -1.260 -0.050) (pt -1.160 0.050) (start 180.0) (sweep 180.0))
+      (pt -1.16 0)
+      (arc (pt -1.160 0.000) (pt -1.260 -0.050) (pt -1.160 0.050) (start 180.0) (sweep .0))
+      (pt -1.26 0))))
+   (leg 1 (pt 0.000 0.000) (padstack 1))
+   (leg 2 (pt 2.540 0.000) (padstack 0))
+   (leg 3 (pt 5.080 0.000) (padstack 0))
+   (padstack 0
+    (hole 0.74)
+    (plated true)
+    (pad (layer TCOP) (round 1.269))
+    (pad (layer INNER) (round 1.269))
+    (pad (layer BCOP) (round 1.269))
+   )
+   (padstack 1
+    (hole 0.74)
+    (plated true)
+    (pad (layer TCOP) (square 1.269))
+    (pad (layer INNER) (round 1.269))
+    (pad (layer BCOP) (square 1.269))
+   )
+   (model "AZ431LBZTR-E1.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)

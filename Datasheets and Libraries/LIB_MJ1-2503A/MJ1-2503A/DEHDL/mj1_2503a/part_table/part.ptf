@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'MJ1_2503A'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "CUI Devices", "MJ1-2503A" (!) = "", "MJ12503A", "Other", "490-MJ1-2503A", "https://www.mouser.co.uk/ProductDetail/CUI-Devices/MJ1-2503A?qs=WyjlAZoYn53Vmgniye7ciw%3D%3D", "AUDIOJACK, 2.5MM, RT, MONO, TH", "https://www.cui.com/product/resource/mj1-2503a.pdf", "5 mm"
+END_PART
+
+END.

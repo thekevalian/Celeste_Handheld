@@ -1,0 +1,29 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model TPA731D
+#/317922/1076823/2.50/8/3/Integrated Circuit
+DEF TPA731D IC 0 30 Y Y 1 F N
+F0 "IC" 1250 300 50 H V L CNN
+F1 "TPA731D" 1250 200 50 H V L CNN
+F2 "SOIC127P600X175-8N" 1250 100 50 H I L CNN
+F3 "http://www.ti.com/lit/gpn/tpa731" 1250 0 50 H I L CNN
+F4 "700-mW Mono, Differential Input, Class-AB Audio Amplifier with Active High Shutdown" 1250 -100 50 H I L CNN "Description"
+F5 "1.75" 1250 -200 50 H I L CNN "Height"
+F6 "595-TPA731D" 1250 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.com/Search/Refine.aspx?Keyword=595-TPA731D" 1250 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Texas Instruments" 1250 -500 50 H I L CNN "Manufacturer_Name"
+F9 "TPA731D" 1250 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X SHUTDOWN 1 0 0 200 R 50 50 0 0 I
+X BYPASS 2 0 -100 200 R 50 50 0 0 I
+X IN+ 3 0 -200 200 R 50 50 0 0 I
+X IN- 4 0 -300 200 R 50 50 0 0 I
+X VO- 8 1400 0 200 L 50 50 0 0 O
+X GND 7 1400 -100 200 L 50 50 0 0 W
+X VDD 6 1400 -200 200 L 50 50 0 0 W
+X VO+ 5 1400 -300 200 L 50 50 0 0 O
+P 5 0 1 6 200 100 1200 100 1200 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

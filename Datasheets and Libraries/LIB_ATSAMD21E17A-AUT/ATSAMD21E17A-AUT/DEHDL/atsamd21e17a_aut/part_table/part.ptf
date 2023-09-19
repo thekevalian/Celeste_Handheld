@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'ATSAMD21E17A_AUT'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Microchip", "ATSAMD21E17A-AUT" (!) = "", "QFN50P500X500X100-33N-D", "Quad Flat No-Lead", "556-ATSAMD21E17A-AUT", "https://www.mouser.co.uk/ProductDetail/Microchip-Technology/ATSAMD21E17A-AUT?qs=KLFHFgXTQiBLmA2MEeDLVA%3D%3D", "IC MCU 32BIT 128KB FLASH 32TQFP", "https://4donline.ihs.com/images/VipMasterIC/IC/MCHP/MCHP-S-A0011993473/MCHP-S-A0013581487-1.pdf?hkey=EF798316E3902B6ED9A73243A3159BB0", "1 mm"
+END_PART
+
+END.

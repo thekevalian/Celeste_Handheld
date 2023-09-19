@@ -1,0 +1,16 @@
+.MJ1-2503A :1 ;AUDIOJACK, 2.5MM, RT, MONO, TH
+MJ12503A
+*STM J
+*NGS
+*PLB 1="1" 2="2" 3="3"
+*MXP 4
+*DFN MJ1-2503A
+~!Mouser Part Number (490-MJ1-2503A)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/CUI-Devices/MJ1-2503A?qs=WyjlAZoYn53Vmgniye7ciw%3D%3D)
+~!Manufacturer_Name (CUI Devices)
+~!Manufacturer_Part_Number (MJ1-2503A)
+~!Link Datasheet (https://www.cui.com/product/resource/mj1-2503a.pdf)
+~!Height (5mm)
+~!3D_Model (MJ1-2503A)
+MJ1-2503A
+1.1!U 2.1!U 3.1!U 

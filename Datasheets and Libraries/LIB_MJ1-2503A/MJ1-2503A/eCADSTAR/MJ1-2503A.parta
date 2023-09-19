@@ -1,0 +1,70 @@
+(Japanese_coding: sjis)
+(function "ECS_550671"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2019-07-12-18:30:44)
+    (utime 2023-03-07-16:10:32)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+        (port "3" (symbPinId 3) (portType INOUT))
+    )
+    (property "symbolName" "MJ1-2503A")
+)
+
+
+(pinAssign "ECS_550671"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2019-07-12-18:30:44)
+    (utime 2023-03-07-16:10:32)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+        (port "3" (symbPinId 3) (portName "3") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_550671")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+                (port "3" (match "3"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "MJ1-2503A")
+)
+
+
+(part "MJ1-2503A"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2019-07-12-18:30:44)
+    (utime 2023-03-07-16:10:32)
+    (packageRef "MJ1-2503A")
+    (pinAssignRef "ECS_550671")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+        (port "3" (symbPinId 3) (portName "3") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "YES")
+    (property "refDesPrefix" "J")
+    (property "description" "AUDIOJACK, 2.5MM, RT, MONO, TH")
+    (property "Mouser_Part_Number" "490-MJ1-2503A")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/CUI-Devices/MJ1-2503A?qs=WyjlAZoYn53Vmgniye7ciw%3D%3D")
+    (property "Manufacturer_Name" "CUI Devices")
+    (property "Manufacturer_Part_Number" "MJ1-2503A")
+    (property "Datasheet_Link" "https://www.cui.com/product/resource/mj1-2503a.pdf")
+    (property "compAreaTopHeight" 5)
+)
+
+

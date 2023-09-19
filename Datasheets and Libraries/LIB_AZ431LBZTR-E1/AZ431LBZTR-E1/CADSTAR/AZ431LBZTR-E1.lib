@@ -1,0 +1,16 @@
+.AZ431LBZTR-E1 :1 ;Voltage References Adj Prec Shunt Reg 1.24V to 18V 3mV
+AZ431LBZTRE1
+*STM IC
+*NGS
+*PLB 1="REF" 2="ANODE" 3="CATHODE"
+*MXP 3
+*DFN AZ431LBZTR-E1
+~!Mouser Part Number (621-AZ431LBZTR-E1)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/AZ431LBZTR-E1?qs=FKu9oBikfSmXZc2hlLrlkw%3D%3D)
+~!Manufacturer_Name (Diodes Inc.)
+~!Manufacturer_Part_Number (AZ431LBZTR-E1)
+~!Link Datasheet (https://www.diodes.com/assets/Datasheets/AZ431L.pdf)
+~!Height (8.7mm)
+~!3D_Model (AZ431LBZTR-E1)
+AZ431LBZTR-E1
+1.1!U 2.1!U 3.1!U 

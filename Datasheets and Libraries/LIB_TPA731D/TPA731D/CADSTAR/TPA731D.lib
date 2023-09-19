@@ -1,0 +1,16 @@
+.TPA731D :1 ;700-mW Mono, Differential Input, Class-AB Audio Amplifier with Active High Shutdown
+SOIC127P600X175-8N
+*STM IC
+*NGS
+*PLB 1="SHUTDOWN" 2="BYPASS" 3="IN+" 4="IN-" 5="VO+" 6="VDD" 7="GND" 8="VO-"
+*MXP 8
+*DFN TPA731D
+~!Mouser Part Number (595-TPA731D)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=595-TPA731D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (TPA731D)
+~!Link Datasheet (http://www.ti.com/lit/gpn/tpa731)
+~!Height (1.75mm)
+~!3D_Model (TPA731D)
+TPA731D
+1.1!I 2.1!I 3.1!I 4.1!I 8.1!Y 7.1!P 6.1!P 5.1!Y 

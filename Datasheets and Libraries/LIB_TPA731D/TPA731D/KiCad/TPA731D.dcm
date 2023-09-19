@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TPA731D
+D 700-mW Mono, Differential Input, Class-AB Audio Amplifier with Active High Shutdown
+K
+F http://www.ti.com/lit/gpn/tpa731
+$ENDCMP
+#
+#End Doc Library

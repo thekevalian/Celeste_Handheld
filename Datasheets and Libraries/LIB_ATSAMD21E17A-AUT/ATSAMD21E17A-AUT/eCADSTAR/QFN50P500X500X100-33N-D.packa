@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "ATSAMD21E17A-AUT"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2022-05-30-09:21:28)
+    (mountForm default
+        (footprintRef "QFN50P500X500X100-33N-D")
+        (spec "System")
+    )
+)

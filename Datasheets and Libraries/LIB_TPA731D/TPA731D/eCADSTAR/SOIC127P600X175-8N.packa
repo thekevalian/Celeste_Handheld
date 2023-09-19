@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "TPA731D"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2019-10-01-05:24:32)
+    (mountForm default
+        (footprintRef "SOIC127P600X175-8N")
+        (spec "System")
+    )
+)

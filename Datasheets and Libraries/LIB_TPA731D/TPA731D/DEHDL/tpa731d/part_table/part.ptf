@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'TPA731D'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "TPA731D" (!) = "", "SOIC127P600X175-8N", "Small Outline Packages", "595-TPA731D", "https://www.mouser.com/Search/Refine.aspx?Keyword=595-TPA731D", "700-mW Mono, Differential Input, Class-AB Audio Amplifier with Active High Shutdown", "http://www.ti.com/lit/gpn/tpa731", "1.75 mm"
+END_PART
+
+END.

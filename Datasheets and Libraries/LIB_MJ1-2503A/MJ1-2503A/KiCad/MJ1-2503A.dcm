@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MJ1-2503A
+D AUDIOJACK, 2.5MM, RT, MONO, TH
+K
+F https://www.cui.com/product/resource/mj1-2503a.pdf
+$ENDCMP
+#
+#End Doc Library
