@@ -1,7 +1,6 @@
-build/DevBoard/debug/_ext/1844592860/initialization.o: \
- ../src/config/DevBoard/initialization.c \
- ../src/config/DevBoard/definitions.h \
- ../src/config/DevBoard/peripheral/nvmctrl/plib_nvmctrl.h \
+build/DevBoard/debug/_ext/975528823/plib_eic.o: \
+ ../src/config/DevBoard/peripheral/eic/plib_eic.c \
+ ../src/config/DevBoard/peripheral/eic/plib_eic.h \
  ../src/config/DevBoard/device.h \
  ../src/packs/ATSAMD21G17D_DFP/samd21g17d.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h \
@@ -72,25 +71,9 @@ build/DevBoard/debug/_ext/1844592860/initialization.o: \
  ../src/config/DevBoard/device_cache.h ../src/config/DevBoard/device.h \
  ../src/config/DevBoard/toolchain_specifics.h \
  ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h \
- ../src/config/DevBoard/peripheral/sercom/spi_master/plib_sercom1_spi_master.h \
- ../src/config/DevBoard/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h \
- ../src/config/DevBoard/peripheral/evsys/plib_evsys.h \
- ../src/config/DevBoard/peripheral/port/plib_port.h \
- ../src/config/DevBoard/peripheral/clock/plib_clock.h \
- ../src/config/DevBoard/peripheral/nvic/plib_nvic.h \
- ../src/config/DevBoard/peripheral/systick/plib_systick.h \
- ../src/config/DevBoard/peripheral/adc/plib_adc.h \
- ../src/config/DevBoard/peripheral/adc/plib_adc_common.h \
- ../src/config/DevBoard/peripheral/eic/plib_eic.h \
- ../src/config/DevBoard/peripheral/tc/plib_tc3.h \
- ../src/config/DevBoard/peripheral/tc/plib_tc_common.h \
- ../src/config/DevBoard/peripheral/dac/plib_dac.h \
- ../src/config/DevBoard/peripheral/tc/plib_tc5.h \
- ../src/config/DevBoard/peripheral/tc/plib_tc4.h
+ ../src/config/DevBoard/interrupts.h
 
-../src/config/DevBoard/definitions.h:
-
-../src/config/DevBoard/peripheral/nvmctrl/plib_nvmctrl.h:
+../src/config/DevBoard/peripheral/eic/plib_eic.h:
 
 ../src/config/DevBoard/device.h:
 
@@ -234,32 +217,4 @@ build/DevBoard/debug/_ext/1844592860/initialization.o: \
 
 ../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h:
 
-../src/config/DevBoard/peripheral/sercom/spi_master/plib_sercom1_spi_master.h:
-
-../src/config/DevBoard/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h:
-
-../src/config/DevBoard/peripheral/evsys/plib_evsys.h:
-
-../src/config/DevBoard/peripheral/port/plib_port.h:
-
-../src/config/DevBoard/peripheral/clock/plib_clock.h:
-
-../src/config/DevBoard/peripheral/nvic/plib_nvic.h:
-
-../src/config/DevBoard/peripheral/systick/plib_systick.h:
-
-../src/config/DevBoard/peripheral/adc/plib_adc.h:
-
-../src/config/DevBoard/peripheral/adc/plib_adc_common.h:
-
-../src/config/DevBoard/peripheral/eic/plib_eic.h:
-
-../src/config/DevBoard/peripheral/tc/plib_tc3.h:
-
-../src/config/DevBoard/peripheral/tc/plib_tc_common.h:
-
-../src/config/DevBoard/peripheral/dac/plib_dac.h:
-
-../src/config/DevBoard/peripheral/tc/plib_tc5.h:
-
-../src/config/DevBoard/peripheral/tc/plib_tc4.h:
+../src/config/DevBoard/interrupts.h:

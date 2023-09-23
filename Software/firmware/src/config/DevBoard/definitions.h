@@ -56,8 +56,10 @@
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
 #include "peripheral/adc/plib_adc.h"
+#include "peripheral/eic/plib_eic.h"
 #include "peripheral/tc/plib_tc3.h"
 #include "peripheral/dac/plib_dac.h"
+#include "peripheral/tc/plib_tc5.h"
 #include "peripheral/tc/plib_tc4.h"
 
 // DOM-IGNORE-BEGIN

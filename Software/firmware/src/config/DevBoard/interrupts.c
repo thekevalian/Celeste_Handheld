@@ -75,7 +75,7 @@ void __attribute__((optimize("-O1"), long_call, noreturn, used))Dummy_Handler(vo
 }
 
 /* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 8.6 deviated 26 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated 24 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Device vectors list dummy definition*/
 extern void SVCall_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void PendSV_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -83,7 +83,6 @@ extern void PM_Handler                 ( void ) __attribute__((weak, alias("Dumm
 extern void SYSCTRL_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void WDT_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void RTC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void EIC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void NVMCTRL_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void DMAC_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void USB_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -97,7 +96,6 @@ extern void SERCOM5_Handler            ( void ) __attribute__((weak, alias("Dumm
 extern void TCC0_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC1_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void TCC2_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
-extern void TC5_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void AC_Handler                 ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void DAC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void PTC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -127,7 +125,7 @@ const H3DeviceVectors exception_table=
     .pfnSYSCTRL_Handler            = SYSCTRL_Handler,
     .pfnWDT_Handler                = WDT_Handler,
     .pfnRTC_Handler                = RTC_Handler,
-    .pfnEIC_Handler                = EIC_Handler,
+    .pfnEIC_Handler                = EIC_InterruptHandler,
     .pfnNVMCTRL_Handler            = NVMCTRL_Handler,
     .pfnDMAC_Handler               = DMAC_Handler,
     .pfnUSB_Handler                = USB_Handler,
@@ -143,7 +141,7 @@ const H3DeviceVectors exception_table=
     .pfnTCC2_Handler               = TCC2_Handler,
     .pfnTC3_Handler                = TC3_TimerInterruptHandler,
     .pfnTC4_Handler                = TC4_TimerInterruptHandler,
-    .pfnTC5_Handler                = TC5_Handler,
+    .pfnTC5_Handler                = TC5_TimerInterruptHandler,
     .pfnADC_Handler                = ADC_InterruptHandler,
     .pfnAC_Handler                 = AC_Handler,
     .pfnDAC_Handler                = DAC_Handler,

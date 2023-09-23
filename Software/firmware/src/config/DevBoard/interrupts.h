@@ -61,8 +61,10 @@ void Reset_Handler (void);
 void NonMaskableInt_Handler (void);
 void HardFault_Handler (void);
 void SysTick_Handler (void);
+void EIC_InterruptHandler (void);
 void TC3_TimerInterruptHandler (void);
 void TC4_TimerInterruptHandler (void);
+void TC5_TimerInterruptHandler (void);
 void ADC_InterruptHandler (void);
 
 

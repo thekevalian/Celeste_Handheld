@@ -147,9 +147,13 @@ void SYS_Initialize ( void* data )
 
 	SYSTICK_TimerInitialize();
     ADC_Initialize();
+    EIC_Initialize();
+
     TC3_TimerInitialize();
 
     DAC_Initialize();
+
+    TC5_TimerInitialize();
 
     TC4_TimerInitialize();
 

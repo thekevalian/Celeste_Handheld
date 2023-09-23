@@ -65,23 +65,13 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/*** Macros for adcSource pin ***/
-#define adcSource_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 0U))
-#define adcSource_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 0U))
-#define adcSource_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 0U))
-#define adcSource_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 0U))
-#define adcSource_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 0U))
-#define adcSource_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 0U)) & 0x01U)
-#define adcSource_PIN                  PORT_PIN_PA00
+/*** Macros for AUDIO pin ***/
+#define AUDIO_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 2U)) & 0x01U)
+#define AUDIO_PIN                  PORT_PIN_PA02
 
-/*** Macros for HEARTBEAT pin ***/
-#define HEARTBEAT_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 1U))
-#define HEARTBEAT_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 1U))
-#define HEARTBEAT_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 1U))
-#define HEARTBEAT_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 1U))
-#define HEARTBEAT_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 1U))
-#define HEARTBEAT_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 1U)) & 0x01U)
-#define HEARTBEAT_PIN                  PORT_PIN_PA01
+/*** Macros for PAUSE pin ***/
+#define PAUSE_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 3U)) & 0x01U)
+#define PAUSE_PIN                  PORT_PIN_PA03
 
 /*** Macros for joystick_X pin ***/
 #define joystick_X_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 4U)) & 0x01U)
@@ -91,14 +81,22 @@
 #define joystick_Y_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 5U)) & 0x01U)
 #define joystick_Y_PIN                  PORT_PIN_PA05
 
-/*** Macros for TFT_VDD pin ***/
-#define TFT_VDD_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 10U))
-#define TFT_VDD_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 10U))
-#define TFT_VDD_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 10U))
-#define TFT_VDD_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 10U))
-#define TFT_VDD_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 10U))
-#define TFT_VDD_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 10U)) & 0x01U)
-#define TFT_VDD_PIN                  PORT_PIN_PA10
+/*** Macros for DASH pin ***/
+#define DASH_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 6U)) & 0x01U)
+#define DASH_PIN                  PORT_PIN_PA06
+
+/*** Macros for JUMP pin ***/
+#define JUMP_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 7U)) & 0x01U)
+#define JUMP_PIN                  PORT_PIN_PA07
+
+/*** Macros for HEARTBEAT pin ***/
+#define HEARTBEAT_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 10U))
+#define HEARTBEAT_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = ((uint32_t)1U << 10U))
+#define HEARTBEAT_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = ((uint32_t)1U << 10U))
+#define HEARTBEAT_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = ((uint32_t)1U << 10U))
+#define HEARTBEAT_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = ((uint32_t)1U << 10U))
+#define HEARTBEAT_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 10U)) & 0x01U)
+#define HEARTBEAT_PIN                  PORT_PIN_PB10
 
 /*** Macros for TFT_RST pin ***/
 #define TFT_RST_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 14U))

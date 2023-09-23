@@ -1,22 +1,22 @@
 Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,Drive Strength
-1,PA00,adcSource,GPIO,Digital,Out,High,,,NORMAL
-2,PA01,HEARTBEAT,GPIO,Digital,Out,High,,,STRONG
-3,PA02,,DAC_VOUT,Analog,High Impedance,n/a,,,NORMAL
-4,PA03,,Available,,,,,,NORMAL
+1,PA00,,Available,,,,,,NORMAL
+2,PA01,,Available,,,,,,STRONG
+3,PA02,AUDIO,DAC_VOUT,Analog,High Impedance,n/a,,,NORMAL
+4,PA03,PAUSE,EIC_EXTINT3,Digital,High Impedance,n/a,No,No,NORMAL
 7,PB08,,Available,,,,,,NORMAL
 8,PB09,,Available,,,,,,NORMAL
 9,PA04,joystick_X,ADC_AIN4/VREFP,Analog,High Impedance,n/a,,,NORMAL
 10,PA05,joystick_Y,ADC_AIN5,Analog,High Impedance,n/a,,,NORMAL
-11,PA06,,Available,,,,,,NORMAL
-12,PA07,,Available,,,,,,NORMAL
+11,PA06,DASH,EIC_EXTINT6,Digital,In/Out,Low,,,NORMAL
+12,PA07,JUMP,EIC_EXTINT7,Digital,High Impedance,n/a,No,No,NORMAL
 13,PA08,,Available,,,,,,NORMAL
 14,PA09,,Available,,,,,,NORMAL
-15,PA10,TFT_VDD,GPIO,Digital,Out,High,,,STRONG
+15,PA10,,Available,,,,,,STRONG
 16,PA11,,Available,,,,,,NORMAL
-19,PB10,,Available,,,,,,NORMAL
+19,PB10,HEARTBEAT,GPIO,Digital,Out,Low,,,NORMAL
 20,PB11,,Available,,,,,,NORMAL
 21,PA12,,Available,,,,,,NORMAL
-22,PA13,,Available,,,,,,NORMAL
+22,PA13,,Available,,,,,,STRONG
 23,PA14,TFT_RST,GPIO,Digital,Out,Low,,,NORMAL
 24,PA15,TFT_DC,GPIO,Digital,Out,Low,,,NORMAL
 25,PA16,TFT_SDA,SERCOM1_PAD0,Digital,High Impedance,n/a,No,No,NORMAL

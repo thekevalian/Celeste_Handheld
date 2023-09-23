@@ -53,13 +53,13 @@ void myadc_handler(ADC_STATUS status, uintptr_t context){
             static uint16_t i = 0;
             joystickX[i] = ADC_ConversionResultGet();
             i = (i+1)%BUFLEN;
-            ADC_ChannelSelect(ADC_POSINPUT_PIN0, ADC_NEGINPUT_GND);
+            ADC_ChannelSelect(ADC_POSINPUT_PIN4, ADC_NEGINPUT_GND);
             is_channel_one = !is_channel_one;
         }else{
             static uint16_t j = 0;
             joystickY[j] = ADC_ConversionResultGet();
             j = (j+1)%BUFLEN;
-            ADC_ChannelSelect(ADC_POSINPUT_PIN1, ADC_NEGINPUT_GND);
+            ADC_ChannelSelect(ADC_POSINPUT_PIN5, ADC_NEGINPUT_GND);
             is_channel_one = !is_channel_one;
         }
     //}
@@ -1271,10 +1271,35 @@ const unsigned short cal[] = {
 const unsigned short wave[256] = {512, 525, 537, 550, 562, 575, 587, 599, 612, 624, 636, 648, 660, 672, 684, 696, 708, 719, 730, 742, 753, 764, 775, 785, 796, 806, 816, 826, 836, 846, 855, 864, 873, 882, 891, 899, 907, 915, 922, 930, 937, 944, 950, 957, 963, 968, 974, 979, 984, 989, 993, 997, 1001, 1004, 1008, 1011, 1013, 1015, 1017, 1019, 1021, 1022, 1022, 1023, 1023, 1023, 1022, 1022, 1021, 1019, 1017, 1015, 1013, 1011, 1008, 1004, 1001, 997, 993, 989, 984, 979, 974, 968, 963, 957, 950, 944, 937, 930, 922, 915, 907, 899, 891, 882, 873, 864, 855, 846, 836, 826, 816, 806, 796, 785, 775, 764, 753, 742, 730, 719, 708, 696, 684, 672, 660, 648, 636, 624, 612, 599, 587, 575, 562, 550, 537, 525, 512, 499, 487, 474, 462, 449, 437, 425, 412, 400, 388, 376, 364, 352, 340, 328, 316, 305, 294, 282, 271, 260, 249, 239, 228, 218, 208, 198, 188, 178, 169, 160, 151, 142, 133, 125, 117, 109, 102, 94, 87, 80, 74, 67, 61, 56, 50, 45, 40, 35, 31, 27, 23, 20, 16, 13, 11, 9, 7, 5, 3, 2, 2, 1, 1, 1, 2, 2, 3, 5, 7, 9, 11, 13, 16, 20, 23, 27, 31, 35, 40, 45, 50, 56, 61, 67, 74, 80, 87, 94, 102, 109, 117, 125, 133, 142, 151, 160, 169, 178, 188, 198, 208, 218, 228, 239, 249, 260, 271, 282, 294, 305, 316, 328, 340, 352, 364, 376, 388, 400, 412, 425, 437, 449, 462, 474, 487, 499};
 
 
-
+volatile int counter = 0;
+volatile int conuet = 0;
 uint8_t ind = 0;
 void audio_handler(TC_TIMER_STATUS status, uintptr_t context){
-    DAC_DataWrite(wave[ind++]);
+    DAC_DataWrite(wave[ind++]); // ind is a 8 bit value, so overflow prevents hard faults
+    
+}
+
+int jumps = 0; // red
+int dashes = 0; //green
+int pauses = 0; //blue
+
+void jump_handler(uintptr_t context){
+    jumps++;
+    TC4_TimerStop();
+    TC4_Timer16bitPeriodSet(4);
+    TC4_TimerStart();
+}
+void dash_handler(uintptr_t context){
+    dashes++;
+    TC4_TimerStop();
+    TC4_Timer16bitPeriodSet(26);
+    TC4_TimerStart();
+}
+void pause_handler(uintptr_t context){
+    pauses++;
+    TC4_TimerStop();
+    TC4_Timer16bitPeriodSet(19);
+    TC4_TimerStart();
 }
 
 int main ( void )
@@ -1284,6 +1309,9 @@ int main ( void )
     SYSTICK_TimerCallbackSet(heartbeat, (uintptr_t)&count);
     ADC_CallbackRegister(myadc_handler, (uintptr_t)joystickX);
     ADC_Enable();
+    EIC_CallbackRegister(JUMP_PIN, jump_handler, (uintptr_t)0);
+    EIC_CallbackRegister(DASH_PIN, dash_handler, (uintptr_t)0);
+    EIC_CallbackRegister(PAUSE_PIN, pause_handler, (uintptr_t)0);
     ST7735_InitR(INITR_REDTAB);
     ST7735_DrawBitmap(4, 159, cal, 120, 160);
     SYSTICK_TimerStart();

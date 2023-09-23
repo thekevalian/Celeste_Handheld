@@ -1,6 +1,6 @@
 /* 
  * File:   ST7735.h
- * Author: keval
+ * Author: information in .c file
  *
  * Created on September 2, 2023, 12:36 AM
  */

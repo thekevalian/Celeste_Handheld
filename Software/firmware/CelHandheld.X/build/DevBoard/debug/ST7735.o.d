@@ -80,9 +80,11 @@ build/DevBoard/debug/ST7735.o: ST7735.c ST7735.h \
  ../src/config/DevBoard/peripheral/systick/plib_systick.h \
  ../src/config/DevBoard/peripheral/adc/plib_adc.h \
  ../src/config/DevBoard/peripheral/adc/plib_adc_common.h \
+ ../src/config/DevBoard/peripheral/eic/plib_eic.h \
  ../src/config/DevBoard/peripheral/tc/plib_tc3.h \
  ../src/config/DevBoard/peripheral/tc/plib_tc_common.h \
  ../src/config/DevBoard/peripheral/dac/plib_dac.h \
+ ../src/config/DevBoard/peripheral/tc/plib_tc5.h \
  ../src/config/DevBoard/peripheral/tc/plib_tc4.h
 
 ST7735.h:
@@ -251,10 +253,14 @@ ST7735.h:
 
 ../src/config/DevBoard/peripheral/adc/plib_adc_common.h:
 
+../src/config/DevBoard/peripheral/eic/plib_eic.h:
+
 ../src/config/DevBoard/peripheral/tc/plib_tc3.h:
 
 ../src/config/DevBoard/peripheral/tc/plib_tc_common.h:
 
 ../src/config/DevBoard/peripheral/dac/plib_dac.h:
+
+../src/config/DevBoard/peripheral/tc/plib_tc5.h:
 
 ../src/config/DevBoard/peripheral/tc/plib_tc4.h:

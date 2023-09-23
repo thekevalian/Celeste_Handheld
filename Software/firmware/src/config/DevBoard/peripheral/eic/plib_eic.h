@@ -1,23 +1,22 @@
 /*******************************************************************************
-  Timer/Counter(TC4) PLIB
+  External Interrupt Controller (EIC) PLIB
 
   Company
     Microchip Technology Inc.
 
   File Name
-    plib_tc4.h
+    plib_eic.h
 
   Summary
-    TC4 PLIB Header File.
+    EIC PLIB Header File.
 
   Description
-    This file defines the interface to the TC peripheral library. This
+    This file defines the interface to the EIC peripheral library. This
     library provides access to and control of the associated peripheral
     instance.
 
   Remarks:
     None.
-
 *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
@@ -45,22 +44,22 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef PLIB_TC4_H      // Guards against multiple inclusion
-#define PLIB_TC4_H
+/* Guards against multiple inclusion */
+#ifndef PLIB_EIC_H
+#define PLIB_EIC_H
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-/* This section lists the other files that are included in this file.
-*/
 
 #include "device.h"
-#include "plib_tc_common.h"
+#include <stdbool.h>
+#include <stddef.h>
 
 // DOM-IGNORE-BEGIN
-#ifdef __cplusplus // Provide C Compatibility
+#ifdef __cplusplus // Provide C++ Compatibility
 
     extern "C" {
 
@@ -72,53 +71,62 @@
 // Section: Data Types
 // *****************************************************************************
 // *****************************************************************************
-/* The following data type definitions are used by the functions in this
-    interface and should be considered part it.
-*/
+
+/* EIC Pin Count */
+#define EXTINT_COUNT                        (16U)
+
+typedef enum
+{
+    /* External Interrupt Controller Pin 3 */
+    EIC_PIN_3 = 3,
+
+    /* External Interrupt Controller Pin 6 */
+    EIC_PIN_6 = 6,
+
+    /* External Interrupt Controller Pin 7 */
+    EIC_PIN_7 = 7,
+
+    EIC_PIN_MAX = 16
+
+} EIC_PIN;
+
+
+typedef void (*EIC_CALLBACK) (uintptr_t context);
+
+typedef struct
+{
+    /* External Interrupt Pin Callback Handler */
+    EIC_CALLBACK    callback;
+
+    /* External Interrupt Pin Client context */
+    uintptr_t       context;
+
+    /* External Interrupt Pin number */
+    EIC_PIN         eicPinNo;
+
+} EIC_CALLBACK_OBJ;
+
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
-/* The following functions make up the methods (set of possible operations) of
-   this interface.
-*/
 
-// *****************************************************************************
+void EIC_Initialize(void);
 
-void TC4_TimerInitialize( void );
+void EIC_InterruptEnable(EIC_PIN pin);
 
-void TC4_TimerStart( void );
+void EIC_InterruptDisable(EIC_PIN pin);
 
-void TC4_TimerStop( void );
-
-uint32_t TC4_TimerFrequencyGet( void );
-
-
-void TC4_Timer16bitPeriodSet( uint16_t period );
-
-uint16_t TC4_Timer16bitPeriodGet( void );
-
-uint16_t TC4_Timer16bitCounterGet( void );
-
-void TC4_Timer16bitCounterSet( uint16_t count );
+void EIC_CallbackRegister(EIC_PIN pin, EIC_CALLBACK callback, uintptr_t context);
 
 
 
-
-void TC4_TimerCallbackRegister( TC_TIMER_CALLBACK callback, uintptr_t context );
-
-
-void TC4_TimerCommandSet(TC_COMMAND command);
-
-
-// DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
+#ifdef __cplusplus // Provide C++ Compatibility
 
     }
 
 #endif
-// DOM-IGNORE-END
 
-#endif /* PLIB_TC4_H */
+#endif /* PLIB_EIC_H */
